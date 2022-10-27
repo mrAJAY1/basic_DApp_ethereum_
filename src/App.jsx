@@ -59,10 +59,12 @@ function App() {
     getBalance();
   }, [account, trs]);
 
+  
   // update on accountChange
-  window.ethereum.on("accountsChanged", function (accounts) {
-    setAccount(accounts[0]);
-  });
+  if (window.ethereum)
+    window.ethereum.on("accountsChanged", function (accounts) {
+      setAccount(accounts[0]);
+    });
 
   // Handle submit
 
@@ -88,7 +90,7 @@ function App() {
       alert("some error occured");
     }
   };
-  
+
   // Retrieve data
   const retrieve = async () => {
     if (contract) {

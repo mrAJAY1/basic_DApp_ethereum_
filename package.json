@@ -1,6 +1,6 @@
 {
   "name": "vblock_web3_1",
-  "homepage": "https://mrajay1.github.io/basic_dapp_ethereum_",
+  "homepage": "https://mrajay1.github.io/basic_DApp_ethereum_",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "vblock_web3_1",
+  "homepage": "https://mrajay1.github.io/basic_dapp_ethereum_",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +18,8 @@
     "web3": "^1.8.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

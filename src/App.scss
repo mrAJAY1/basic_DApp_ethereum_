@@ -1,0 +1,186 @@
+.App {
+  background: linear-gradient(
+      209deg,
+      rgba(210, 2, 224, 0.5) 30%,
+      rgb(11, 0, 218, 0.3) 70.5%
+    ),
+    linear-gradient(127deg, rgb(10, 85, 10) 3%, rgba(0, 255, 0, 0) 50%),
+    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.accountContianer {
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  height: 10vh;
+  width: 50vw;
+  background-color: white;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.account {
+  height: 100%;
+  width: calc(50% - 20px);
+  padding: 10px;
+  overflow-x: auto;
+}
+.balance {
+  height: 100%;
+  width: calc(50% - 20px);
+  padding: 10px;
+  overflow-x: auto;
+}
+
+h1 {
+  font-size: calc(0.5rem + 0.5vw);
+}
+h3 {
+  font-size: calc(0.3rem + 0.5vw);
+}
+p {
+  padding: 0 5px 0 5px;
+  font-size: calc(0.2rem + 0.5vw);
+}
+
+.contract {
+  height: 30vh;
+  width: 30vw;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.contractData {
+  height: calc(50% - 20px);
+  width: calc(100% - 20px);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.value {
+  height: 50px;
+  width: 100%;
+  padding: 0 10px 0 10px;
+  border: 1px solid rgb(158, 158, 158);
+  border-radius: 10px;
+}
+.value:disabled {
+  background-color: white;
+}
+.contractForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(50% - 20px);
+  width: calc(100% - 20px);
+  padding: 20px;
+}
+.formInput {
+  width: 60%;
+  height: 50px;
+  padding: 0 15px 0 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid rgb(158, 158, 158);
+}
+label {
+  padding-left: 5px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -30%;
+  text-transform: uppercase;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.Btn {
+  width: 100px;
+  height: 50px;
+  color: white;
+  font-weight: bolder;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 3px rgb(85, 85, 85);
+  cursor: pointer;
+  &:disabled {
+    pointer-events: none;
+  }
+}
+.value:focus {
+  border: 1px solid rgb(158, 158, 158);
+  outline: none;
+}
+.update {
+  background-color: rgb(64, 163, 255);
+  position: relative;
+  overflow: hidden;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 20%;
+    left: -100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    color: black;
+    background-color: rgb(153, 209, 255);
+    transition: left 0.8s ease;
+    transform: rotate(50deg);
+  }
+  &:hover {
+    &::after {
+      left: 200%;
+    }
+  }
+}
+
+.retrieve {
+  background-color: rgb(255, 172, 18);
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 20%;
+    left: -100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    color: black;
+    background-color: rgb(255, 200, 99);
+    transition: left 0.8s ease;
+    transform: rotate(50deg);
+  }
+  &:hover {
+    &::after {
+      left: 200%;
+    }
+  }
+}

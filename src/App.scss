@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   background: linear-gradient(
       209deg,
@@ -14,7 +17,6 @@
   position: absolute;
   overflow: hidden;
   display: flex;
-  height: 10vh;
   width: 50vw;
   background-color: white;
   top: 20%;
@@ -28,13 +30,25 @@
   height: 100%;
   width: calc(50% - 20px);
   padding: 10px;
-  overflow-x: auto;
+  overflow-x: hidden;
+  p {
+    overflow-x: auto;
+  }
+  p::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  p::-webkit-scrollbar-thumb {
+   display: none;
+  }
 }
 .balance {
   height: 100%;
   width: calc(50% - 20px);
   padding: 10px;
-  overflow-x: auto;
+  overflow-x: hidden;
+  p {
+    overflow-x: auto;
+  }
 }
 
 h1 {
@@ -49,7 +63,6 @@ p {
 }
 
 .contract {
-  min-height: 30vh;
   width: 30vw;
   background-color: white;
   position: absolute;
@@ -182,5 +195,45 @@ input[type="number"] {
     &::after {
       left: 200%;
     }
+  }
+}
+.inputContainer {
+  width: 70%;
+}
+@media (max-width: 1024px) {
+  .contractForm {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contract {
+    width: 80vw;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    top: 65%;
+  }
+  .contractData {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inputContainer {
+    width: 100%;
+  }
+  .Btn {
+    margin-top: 15px;
+    width: auto;
+    height: 40px;
+    padding: 5px;
+  }
+  .accountContianer {
+    flex-direction: column;
+    width: 80vw;
+  }
+  .account,
+  .balance {
+    width: auto;
+  }
+  p {
+    font-size: 0.8rem;
   }
 }

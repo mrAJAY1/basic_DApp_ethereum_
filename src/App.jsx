@@ -31,7 +31,6 @@ function App() {
     const getAccount = async () => {
       if (ethereum) {
         await ethereum.request({ method: "eth_requestAccounts" });
-        await ethereum.request({ method: "eth_accounts" });
         const accounts = await ethereum.request({ method: "eth_accounts" });
         setAccount(accounts[0]);
       }
@@ -52,8 +51,8 @@ function App() {
     const getBalance = async () => {
       if (ethereum && account) {
         const result = await window.web3.eth.getBalance(account);
-        const dataBalace = window.web3.utils.fromWei(result, "ether");
-        setBalance(`${dataBalace}<b> MATIC</b> `);
+        const decimalBalance = window.web3.utils.fromWei(result, "ether");
+        setBalance(`${decimalBalance}<b> MATIC</b> `);
       }
     };
     getBalance();
@@ -81,8 +80,8 @@ function App() {
         setTransaction(transaction);
         setLoading(false);
       } catch (err) {
-        setLoading(false);
         notify("transaction failed");
+        setLoading(false);
         console.log(err);
       }
     } else {
@@ -120,7 +119,7 @@ function App() {
 
       <div className="contract">
         <div className="contractData">
-          <div style={{ width: "70%" }}>
+          <div className="inputContainer">
             <input
               disabled
               value={stored}
@@ -133,7 +132,7 @@ function App() {
           </button>
         </div>
         <form className="contractForm" onSubmit={handleSubmit}>
-          <div style={{ width: "70%", position: "relative" }}>
+          <div style={{ position: "relative" }} className="inputContainer">
             <label htmlFor="">Enter Value</label>
             <input
               placeholder="Enter the number"

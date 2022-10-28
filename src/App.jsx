@@ -50,7 +50,7 @@ function App() {
 
   useEffect(() => {
     const getBalance = async () => {
-      if (ethereum) {
+      if (ethereum && account) {
         const result = await window.web3.eth.getBalance(account);
         const dataBalace = window.web3.utils.fromWei(result, "ether");
         setBalance(`${dataBalace}<b> MATIC</b> `);
@@ -59,7 +59,6 @@ function App() {
     getBalance();
   }, [account, trs]);
 
-  
   // update on accountChange
   if (window.ethereum)
     window.ethereum.on("accountsChanged", function (accounts) {

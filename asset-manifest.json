@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/basic_DApp_ethereum_/static/css/main.a9bf242d.css",
-    "main.js": "/basic_DApp_ethereum_/static/js/main.57533b08.js",
+    "main.css": "/basic_DApp_ethereum_/static/css/main.658791d9.css",
+    "main.js": "/basic_DApp_ethereum_/static/js/main.26d50cc0.js",
     "index.html": "/basic_DApp_ethereum_/index.html",
-    "main.a9bf242d.css.map": "/basic_DApp_ethereum_/static/css/main.a9bf242d.css.map",
-    "main.57533b08.js.map": "/basic_DApp_ethereum_/static/js/main.57533b08.js.map"
+    "main.658791d9.css.map": "/basic_DApp_ethereum_/static/css/main.658791d9.css.map",
+    "main.26d50cc0.js.map": "/basic_DApp_ethereum_/static/js/main.26d50cc0.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9bf242d.css",
-    "static/js/main.57533b08.js"
+    "static/css/main.658791d9.css",
+    "static/js/main.26d50cc0.js"
   ]
 }

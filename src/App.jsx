@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     const getAccount = async () => {
       if (ethereum) {
-        ethereum.enable();
+        await ethereum.request({ method: "eth_requestAccounts" });
         await ethereum.request({ method: "eth_accounts" });
         const accounts = await ethereum.request({ method: "eth_accounts" });
         setAccount(accounts[0]);
